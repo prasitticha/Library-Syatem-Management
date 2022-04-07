@@ -17,6 +17,51 @@ namespace Library_System_Management
             InitializeComponent();
         }
 
+        private void openToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "CSV (*.csv) | *.csv";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string[] readAllLine = File.ReadAllLines(openFileDialog.FileName);
+
+                string readAllText = File.ReadAllText(openFileDialog.FileName);
+                for (int i = 1; i < readAllLine.Length; i++)
+                {
+                    string allDATARAW = readAllLine[i];
+                    string[] allDATASplited = allDATARAW.Split(',');
+                    this.dataGridView1.Rows.Add(allDATASplited[0], allDATASplited[1], allDATASplited[2], allDATASplited[3], allDATASplited[4], allDATASplited[5]);
+                }
+            }
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "CSV(*.csv)|*.csv";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                {
+                    int columnCount = dataGridView1.Columns.Count;
+                    string column = "";
+                    string[] outputCSV = new string[dataGridView1.Rows.Count + 1];
+                    for (int i = 0; i < columnCount; i++)
+                    {
+                        column += dataGridView1.Columns[i].HeaderText.ToString() + ",";
+                    }
+                    outputCSV[0] += column;
+                    for (int i = 1; (i - 1) < dataGridView1.Rows.Count; i++)
+                    {
+                        for (int j = 0; j < columnCount; j++)
+                        {
+                            outputCSV[i] += dataGridView1.Rows[i - 1].Cells[j].Value.ToString() + ",";
+                        }
+                    }
+                    File.WriteAllLines(saveFileDialog.FileName, outputCSV, Encoding.UTF8);
+                }
+            }
+        }
+
         internal void UserPassword(string UserName, string User)
         {
             string UserName1Show = UserName;
@@ -100,51 +145,6 @@ namespace Library_System_Management
             textBoxName.Text = "";
             textBoxUserName.Text = "";
             textBoxPassword.Text = "";
-        }
-
-        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Filter = "CSV(*.csv)|*.csv";
-            if (saveFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                {
-                    int columnCount = dataGridView1.Columns.Count;
-                    string column = "";
-                    string[] outputCSV = new string[dataGridView1.Rows.Count + 1];
-                    for (int i = 0; i < columnCount; i++)
-                    {
-                        column += dataGridView1.Columns[i].HeaderText.ToString() + ",";
-                    }
-                    outputCSV[0] += column;
-                    for (int i = 1; (i - 1) < dataGridView1.Rows.Count; i++)
-                    {
-                        for (int j = 0; j < columnCount; j++)
-                        {
-                            outputCSV[i] += dataGridView1.Rows[i - 1].Cells[j].Value.ToString() + ",";
-                        }
-                    }
-                    File.WriteAllLines(saveFileDialog.FileName, outputCSV, Encoding.UTF8);
-                }
-            }
-        }
-
-        private void openToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "CSV (*.csv) | *.csv";
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                string[] readAllLine = File.ReadAllLines(openFileDialog.FileName);
-
-                string readAllText = File.ReadAllText(openFileDialog.FileName);
-                for (int i = 1; i < readAllLine.Length; i++)
-                {
-                    string allDATARAW = readAllLine[i];
-                    string[] allDATASplited = allDATARAW.Split(',');
-                    this.dataGridView1.Rows.Add(allDATASplited[0], allDATASplited[1], allDATASplited[2], allDATASplited[3], allDATASplited[4], allDATASplited[5]);
-                }
-            }
         }
     }
 }
