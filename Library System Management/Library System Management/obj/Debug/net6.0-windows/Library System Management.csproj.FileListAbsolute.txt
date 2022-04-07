@@ -2,7 +2,6 @@ C:\Users\Prasittichai Jansom\Documents\GitHub\Library-Syatem-Management\Library 
 C:\Users\Prasittichai Jansom\Documents\GitHub\Library-Syatem-Management\Library System Management\Library System Management\bin\Debug\net6.0-windows\Library System Management.deps.json
 C:\Users\Prasittichai Jansom\Documents\GitHub\Library-Syatem-Management\Library System Management\Library System Management\bin\Debug\net6.0-windows\Library System Management.runtimeconfig.json
 C:\Users\Prasittichai Jansom\Documents\GitHub\Library-Syatem-Management\Library System Management\Library System Management\bin\Debug\net6.0-windows\Library System Management.dll
-C:\Users\Prasittichai Jansom\Documents\GitHub\Library-Syatem-Management\Library System Management\Library System Management\bin\Debug\net6.0-windows\ref\Library System Management.dll
 C:\Users\Prasittichai Jansom\Documents\GitHub\Library-Syatem-Management\Library System Management\Library System Management\bin\Debug\net6.0-windows\Library System Management.pdb
 C:\Users\Prasittichai Jansom\Documents\GitHub\Library-Syatem-Management\Library System Management\Library System Management\obj\Debug\net6.0-windows\Library System Management.csproj.AssemblyReference.cache
 C:\Users\Prasittichai Jansom\Documents\GitHub\Library-Syatem-Management\Library System Management\Library System Management\obj\Debug\net6.0-windows\Library_System_Management.Form1.resources
@@ -17,3 +16,4 @@ C:\Users\Prasittichai Jansom\Documents\GitHub\Library-Syatem-Management\Library 
 C:\Users\Prasittichai Jansom\Documents\GitHub\Library-Syatem-Management\Library System Management\Library System Management\obj\Debug\net6.0-windows\Library System Management.pdb
 C:\Users\Prasittichai Jansom\Documents\GitHub\Library-Syatem-Management\Library System Management\Library System Management\obj\Debug\net6.0-windows\Library System Management.genruntimeconfig.cache
 C:\Users\Prasittichai Jansom\Documents\GitHub\Library-Syatem-Management\Library System Management\Library System Management\obj\Debug\net6.0-windows\Library_System_Management.Form2.resources
+C:\Users\Prasittichai Jansom\Documents\GitHub\Library-Syatem-Management\Library System Management\Library System Management\obj\Debug\net6.0-windows\refint\Library System Management.dll

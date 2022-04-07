@@ -35,6 +35,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.buttonExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,7 +74,7 @@
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(517, 45);
+            this.textBox3.Size = new System.Drawing.Size(473, 45);
             this.textBox3.TabIndex = 0;
             this.textBox3.TabStop = false;
             this.textBox3.Text = "Library System Management";
@@ -109,12 +110,25 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Password";
             // 
+            // buttonExit
+            // 
+            this.buttonExit.BackColor = System.Drawing.Color.Chartreuse;
+            this.buttonExit.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonExit.Location = new System.Drawing.Point(410, 210);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(75, 27);
+            this.buttonExit.TabIndex = 4;
+            this.buttonExit.Text = "Exit";
+            this.buttonExit.UseVisualStyleBackColor = false;
+            this.buttonExit.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.ClientSize = new System.Drawing.Size(541, 249);
+            this.ClientSize = new System.Drawing.Size(497, 249);
+            this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -123,7 +137,7 @@
             this.Controls.Add(this.textBoxUser);
             this.Controls.Add(this.buttonLogin);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "FormLogin";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -139,5 +153,6 @@
         private PictureBox pictureBox1;
         private Label label1;
         private Label label2;
+        private Button buttonExit;
     }
 }

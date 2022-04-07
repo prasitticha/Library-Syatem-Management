@@ -13,6 +13,12 @@ namespace Library_System_Management
         {
             string User = textBoxUser.Text;
             string Password = textBoxPassword.Text;
+            /*
+            if(textBoxUser.Text == "")
+            {
+                MessageBox.Show("Please enter your Username or ID");
+            }
+            */
             if(User == "123456" && Password == "654321")
             {
                 form2.Show();
@@ -33,12 +39,32 @@ namespace Library_System_Management
 
                 form2.UserPassword(UserName, User);
             }
+            else if(textBoxUser.Text == "" && textBoxPassword.Text == "")
+            {
+                MessageBox.Show("Please enter your Username or ID");
+            }
+            else if(textBoxUser.Text == "")
+            {
+                MessageBox.Show("Please enter your Username");
+                textBoxPassword.Text = "";
+            }
+            else if (textBoxPassword.Text == "")
+            {
+                MessageBox.Show("Please enter your Password");
+                textBoxUser.Text = "";
+            }
             else
             {
+                //MessageBox.Show("Please enter your Username or ID");
                 MessageBox.Show("User & Password", "ERROR");
                 textBoxUser.Text = "";
                 textBoxPassword.Text = "";
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
